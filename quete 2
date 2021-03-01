@@ -1,0 +1,15 @@
+ 3342  find planets
+ 3343  mkdir real fictional inhabited
+ 3344  cd real
+ 3345  mkdir terrestrial gas-giants dwarf-planets
+ 3346  cd ..
+ 3347  mv planets/jupiter.jpeg planets/saturn.jpeg real/dwarf-planets
+ 3348  mv planets/jupiter.jpeg planets/saturn.jpeg real/gas-giants
+ 3349  mv planets/pluto.jpeg real/dwarf-planets
+ 3350  mv planets/earth.jpeg planets/mercury.jpeg planets/mars.jpeg planets/venus.jpeg real/terrestrial
+ 3351  mv planets/neptune.jpeg planets/uranus.jpeg real/gas-giants
+ 3352  mv planets/arrakis.jpeg planets/cybertron.jpeg planets/coruscant.jpeg fictional
+ 3353  rm -R planets
+ 3354  rm -R planets.zip
+ 3355  cp fictional/arrakis.jpeg fictional/coruscant.jpeg fictional/cybertron.jpeg real/terrestrial/earth.jpeg inhabited
+ 3358  rm -R real/dwarf-planets
