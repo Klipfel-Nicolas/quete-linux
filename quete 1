@@ -1,0 +1,28 @@
+Last login: Mon Mar  1 15:16:59 on ttys000
+➜  ~ pwd
+/Users/klipfelnicolas
+➜  ~ ls 
+Applications Desktop      Documents    Downloads    Library      Movies       Music        Pictures     Public
+➜  ~ cd desktop
+➜  desktop ls
+Firefox.app            Inkscape.app           Visual Studio Code.app dossier web
+GIMP-2.10.app          MAMP copie.app         cmd-ligneComande.pdf   htdocs
+Google Chrome          Recour transiton Pro   dossier Design         photos
+➜  desktop cd . 
+➜  desktop cd ..
+➜  ~ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
