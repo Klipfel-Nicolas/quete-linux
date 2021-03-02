@@ -1,15 +1,58 @@
- 3342  find planets
- 3343  mkdir real fictional inhabited
- 3344  cd real
- 3345  mkdir terrestrial gas-giants dwarf-planets
- 3346  cd ..
- 3347  mv planets/jupiter.jpeg planets/saturn.jpeg real/dwarf-planets
- 3348  mv planets/jupiter.jpeg planets/saturn.jpeg real/gas-giants
- 3349  mv planets/pluto.jpeg real/dwarf-planets
- 3350  mv planets/earth.jpeg planets/mercury.jpeg planets/mars.jpeg planets/venus.jpeg real/terrestrial
- 3351  mv planets/neptune.jpeg planets/uranus.jpeg real/gas-giants
- 3352  mv planets/arrakis.jpeg planets/cybertron.jpeg planets/coruscant.jpeg fictional
- 3353  rm -R planets
- 3354  rm -R planets.zip
- 3355  cp fictional/arrakis.jpeg fictional/coruscant.jpeg fictional/cybertron.jpeg real/terrestrial/earth.jpeg inhabited
- 3358  rm -R real/dwarf-planets
+➜  shell mkdir real fictional inhabited
+
+➜  shell ls
+fictional inhabited planets   real
+
+➜  shell cd real
+
+➜  real mkdir terrestrial gas-giants dwarf-planets
+
+➜  real ls
+dwarf-planets gas-giants    terrestrial
+
+➜  real cd ..
+
+➜  shell find planets
+planets
+planets/mercury.jpeg
+planets/earth.jpeg
+planets/pluto.jpeg
+planets/arrakis.jpeg
+planets/jupiter.jpeg
+planets/venus.jpeg
+planets/mars.jpeg
+planets/cybertron.jpeg
+planets/coruscant.jpeg
+planets/uranus.jpeg
+planets/neptune.jpeg
+planets/saturn.jpeg
+
+➜  shell mv planets/mercury.jpeg planets/earth.jpeg planets/venus.jpeg planets/mars.jpeg real/terrestrial
+
+➜  shell mv planets/pluto.jpeg real/dwarf-planets
+
+➜  shell mv planets/jupiter.jpeg planets/neptune.jpeg planets/saturn.jpeg planets/uranus.jpeg real/gas-giants
+
+➜  shell mv planets/arrakis.jpeg coruscant.jpeg cybertron.jpeg fictional
+mv: rename coruscant.jpeg to fictional/coruscant.jpeg: No such file or directory
+mv: rename cybertron.jpeg to fictional/cybertron.jpeg: No such file or directory
+
+➜  shell mv planets/coruscant.jpeg planets/cybertron.jpeg fictional 
+
+➜  shell rm -R planets
+
+➜  shell cp real/terrestrial/earth.jpeg fictional/*.jpeg inhabited
+
+➜  shell rm -R real/dwarf-planets
+
+➜  shell ls real/gas-giants
+jupiter.jpeg neptune.jpeg saturn.jpeg  uranus.jpeg
+
+➜  shell ls real/terrestrial
+earth.jpeg   mars.jpeg    mercury.jpeg venus.jpeg
+
+➜  shell ls inhabited
+arrakis.jpeg   coruscant.jpeg cybertron.jpeg earth.jpeg
+
+➜  shell ls fictional
+arrakis.jpeg   coruscant.jpeg cybertron.jpeg
