@@ -1,58 +1,59 @@
-➜  shell mkdir real fictional inhabited
-
-➜  shell ls
-fictional inhabited planets   real
-
-➜  shell cd real
-
-➜  real mkdir terrestrial gas-giants dwarf-planets
-
-➜  real ls
-dwarf-planets gas-giants    terrestrial
-
-➜  real cd ..
-
-➜  shell find planets
-planets
-planets/mercury.jpeg
-planets/earth.jpeg
-planets/pluto.jpeg
-planets/arrakis.jpeg
-planets/jupiter.jpeg
-planets/venus.jpeg
-planets/mars.jpeg
-planets/cybertron.jpeg
-planets/coruscant.jpeg
-planets/uranus.jpeg
-planets/neptune.jpeg
-planets/saturn.jpeg
-
-➜  shell mv planets/mercury.jpeg planets/earth.jpeg planets/venus.jpeg planets/mars.jpeg real/terrestrial
-
-➜  shell mv planets/pluto.jpeg real/dwarf-planets
-
-➜  shell mv planets/jupiter.jpeg planets/neptune.jpeg planets/saturn.jpeg planets/uranus.jpeg real/gas-giants
-
-➜  shell mv planets/arrakis.jpeg coruscant.jpeg cybertron.jpeg fictional
-mv: rename coruscant.jpeg to fictional/coruscant.jpeg: No such file or directory
-mv: rename cybertron.jpeg to fictional/cybertron.jpeg: No such file or directory
-
-➜  shell mv planets/coruscant.jpeg planets/cybertron.jpeg fictional 
-
-➜  shell rm -R planets
-
-➜  shell cp real/terrestrial/earth.jpeg fictional/*.jpeg inhabited
-
-➜  shell rm -R real/dwarf-planets
-
-➜  shell ls real/gas-giants
-jupiter.jpeg neptune.jpeg saturn.jpeg  uranus.jpeg
-
-➜  shell ls real/terrestrial
-earth.jpeg   mars.jpeg    mercury.jpeg venus.jpeg
-
-➜  shell ls inhabited
-arrakis.jpeg   coruscant.jpeg cybertron.jpeg earth.jpeg
-
-➜  shell ls fictional
-arrakis.jpeg   coruscant.jpeg cybertron.jpeg
+➜  quetes git:(master) ✗ unzip planets.zip
+Archive:  planets.zip
+   creating: planets/
+  inflating: planets/mercury.jpeg    
+  inflating: planets/earth.jpeg      
+  inflating: planets/pluto.jpeg      
+  inflating: planets/arrakis.jpeg    
+  inflating: planets/jupiter.jpeg    
+  inflating: planets/venus.jpeg      
+  inflating: planets/mars.jpeg       
+  inflating: planets/cybertron.jpeg  
+  inflating: planets/coruscant.jpeg  
+  inflating: planets/uranus.jpeg     
+  inflating: planets/neptune.jpeg    
+  inflating: planets/saturn.jpeg     
+➜  quetes git:(master) ✗ ls
+css         planets     planets.zip
+➜  quetes git:(master) ✗ cd planets
+➜  planets git:(master) ✗ mkdir real fictional inhabited
+➜  planets git:(master) ✗ cd real
+➜  real git:(master) ✗ mkdir terrestrial gas-giants dwarf-planets
+➜  real git:(master) ✗ cd ..
+➜  planets git:(master) ✗ mv mercury.jpeg earth.jpeg venus.jpeg mars.jpeg real/terrestrial
+➜  planets git:(master) ✗ mv pluto.jpeg real/dwarf-planets
+➜  planets git:(master) ✗ mv jupiter.jpeg neptune.jpeg saturn.jpeg uranus.jpeg real/gas-giants
+➜  planets git:(master) ✗ ls
+arrakis.jpeg   coruscant.jpeg cybertron.jpeg fictional      inhabited      real
+➜  planets git:(master) ✗ mv arrakis.jpeg   coruscant.jpeg cybertron.jpeg fictional
+➜  planets git:(master) ✗ ls
+fictional inhabited real
+➜  planets git:(master) ✗ cp real/terrestrial/earth.jpeg fictional/*.jpeg inhabited
+➜  planets git:(master) ✗ rm -R real/dwarf-planets
+➜  planets git:(master) ✗ find
+usage: find [-H | -L | -P] [-EXdsx] [-f path] path ... [expression]
+       find [-H | -L | -P] [-EXdsx] -f path [path ...] [expression]
+➜  planets git:(master) ✗ find .
+.
+./.DS_Store
+./real
+./real/gas-giants
+./real/gas-giants/jupiter.jpeg
+./real/gas-giants/uranus.jpeg
+./real/gas-giants/neptune.jpeg
+./real/gas-giants/saturn.jpeg
+./real/terrestrial
+./real/terrestrial/mercury.jpeg
+./real/terrestrial/earth.jpeg
+./real/terrestrial/venus.jpeg
+./real/terrestrial/mars.jpeg
+./inhabited
+./inhabited/earth.jpeg
+./inhabited/arrakis.jpeg
+./inhabited/cybertron.jpeg
+./inhabited/coruscant.jpeg
+./fictional
+./fictional/arrakis.jpeg
+./fictional/cybertron.jpeg
+./fictional/coruscant.jpeg
+➜  planets git:(master) ✗ 
